@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_manual"
+            android:icon="@drawable/manual_transmission"
+            android:title="Manual" />
+        <item
+            android:id="@+id/nav_auto"
+            android:icon="@drawable/coord_icon"
+            android:title="Coord" />
+        <item
+            android:id="@+id/nav_auto_map"
+            android:icon="@drawable/route"
+            android:title="Mapper" />
+    </group>
+    <group >
+        <item android:title="Image">
+            <menu>
+                <item
+                    android:id="@+id/nav_img"
+                    android:icon="@drawable/camera_icon"
+                    android:title="Tracker" />
+            </menu>
+        </item>
+    </group>
+    <group >
+        <item android:title="Settings">
+            <menu>
+                <item
+                    android:id="@+id/nav_IP"
+                    android:icon="@drawable/ip_asset"
+                    android:title="IP Address" />
+            </menu>
+        </item>
+    </group>
+</menu>

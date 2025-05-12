@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true"
+    tools:context=".AutoNavActivity">
+
+    <View
+        android:id="@+id/outsideOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:fitsSystemWindows="true">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/thetaCoordCardView"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="232dp"
+            android:background="@color/gray"
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:cardMaxElevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.381"
+            app:layout_constraintStart_toEndOf="@+id/thetaCoordView">
+
+            <EditText
+                android:id="@+id/thetaCoordInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:cursorVisible="false"
+                android:elevation="20dp"
+                android:ems="10"
+                android:fontFamily="@font/baloo"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/black"
+                android:textColorHint="@color/black"
+                android:textColorLink="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/thetaCoordView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginBottom="24dp"
+            android:elevation="20dp"
+            android:text="ɵ"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/addCoordBtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yCoordCardView"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/gray"
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:cardMaxElevation="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/thetaCoordCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.381"
+            app:layout_constraintStart_toEndOf="@+id/yCoordView">
+
+            <EditText
+                android:id="@+id/yCoordInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:cursorVisible="false"
+                android:drawableTint="@color/black"
+                android:elevation="20dp"
+                android:ems="10"
+                android:fontFamily="@font/baloo"
+                android:foregroundTint="@color/black"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/black"
+                android:textColorHint="@color/black"
+                android:textColorLink="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/yCoordView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="20dp"
+            android:elevation="20dp"
+            android:text="Y"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/thetaCoordView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/xCoordView"
+            app:layout_constraintVertical_bias="0.047" />
+
+<!--        <com.google.android.material.navigation.NavigationView-->
+<!--            android:id="@+id/navView"-->
+<!--            android:layout_width="170dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_gravity="start"-->
+<!--            android:layout_marginStart="4dp"-->
+<!--            android:background="@color/black"-->
+<!--            android:translationX="-170dp"-->
+<!--            android:visibility="gone"-->
+<!--            app:elevation="100dp"-->
+<!--            app:headerLayout="@layout/menu_header"-->
+<!--            app:itemBackground="@color/black"-->
+<!--            app:itemIconSize="30dp"-->
+<!--            app:itemIconTint="@color/gray"-->
+<!--            app:itemTextColor="@color/white"-->
+<!--            app:itemVerticalPadding="24dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.328"-->
+<!--            app:menu="@menu/main_menu" />-->
+
+        <TextView
+            android:id="@+id/xCoordView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:elevation="20dp"
+            android:text="X"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusBox"
+            app:layout_constraintVertical_bias="0.097" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/xCoordCardView"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/gray"
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:cardMaxElevation="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/yCoordCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.381"
+            app:layout_constraintStart_toEndOf="@+id/xCoordView">
+
+            <EditText
+                android:id="@+id/xCoordInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black"
+                android:cursorVisible="false"
+                android:drawableTint="@color/black"
+                android:elevation="20dp"
+                android:ems="10"
+                android:fontFamily="@font/baloo"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/black"
+                android:textColorHint="@color/black"
+                android:textColorLink="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/addCoordBtn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginBottom="156dp"
+            android:backgroundTint="@color/gray"
+            android:elevation="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_add_location_24" />
+
+        <ImageButton
+            android:id="@+id/autoDriveBtn"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/gray"
+            android:elevation="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addCoordBtn"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/baseline_drive_eta_24" />
+
+        <ImageButton
+            android:id="@+id/removeBtn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="156dp"
+            android:backgroundTint="@color/gray"
+            android:elevation="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/baseline_remove_24" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statusBox"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="40dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="@color/gray"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:cardMaxElevation="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/xCoordCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/statusTitleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:fontFamily="sans-serif"
+                    android:text="2/3 Goal(s)"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/statusView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/baloo"
+                    android:paddingTop="20dp"
+                    android:text="Cancelling"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            app:cardBackgroundColor="#F4F1F1"
+            app:layout_constraintBottom_toBottomOf="@+id/autoDriveBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Controller</string>
+    <dimen name="settings_icon_width">62dp</dimen>
+    <dimen name="settings_icon_height">50dp</dimen>
+</resources>
